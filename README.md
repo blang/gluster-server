@@ -5,11 +5,11 @@ This repository will help to create a GlusterFS server cluster using docker cont
 This example setup needs 2 servers and several dns entries. 
 Serversnames are core-1 and core-2, with the following dns entries:
 - core-1 -> gluster.core-1.mydomain
-- core-2 -> gluster.core-1.mydomain
+- core-2 -> gluster.core-2.mydomain
 
 Use round-robin dns to core-1 and core-2 on the client.
 
-Both servers are identical on this setup and use the same volume mounts.
+Both servers are identical in this setup and use the same volume mounts.
 
 Take care to use a private network since all ports are opened to the host interface.
 The hosts /data directory filesystem needs to be glusterfs compatible, btrfs, xfs etc.
@@ -30,7 +30,7 @@ Servers need a setup with some manual steps.
 ### On both servers
 ```bash
 mkdir -p /data/glusterserver/data
-mkdir -p /data/glusterserver/vols
+mkdir -p /data/glusterserver/metadata
 mkdir -p /data/glusterserver/etc
 cp hosts /data/glusterserver/etc/hosts
 ```
