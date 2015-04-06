@@ -10,7 +10,7 @@ RUN locale-gen en_US.UTF-8
 
 RUN apt-get install -y wget attr software-properties-common psmisc
 
-RUN add-apt-repository ppa:semiosis/ubuntu-glusterfs-3.5 && \
+RUN add-apt-repository ppa:gluster/glusterfs-3.6 && \
 	apt-get update -q && \
 	apt-get install -y glusterfs-server
 
